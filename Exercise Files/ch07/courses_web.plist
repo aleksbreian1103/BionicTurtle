@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Web Fonts First Look</key>
+	<string>James Williamson</string>
+	<key>CSS Fundamentals</key>
+	<string>James Williamson</string>
+	<key>Creating and Managing a Blog Network with WordPress</key>
+	<string>Justin Seeley</string>
+	<key>Create an Animated Bar Chart with jQuery and Dreamweaver</key>
+	<string>Chris Converse</string>
+	<key>Create an Animated Bar Chart with jQuery</key>
+	<string>Chris Converse</string>
+	<key>CSS: Styling Forms</key>
+	<string>Ray Villalobos</string>
+	<key>HTML5: document Editing in Depth</key>
+	<string>Bill Weinman</string>
+</dict>
+</plist>

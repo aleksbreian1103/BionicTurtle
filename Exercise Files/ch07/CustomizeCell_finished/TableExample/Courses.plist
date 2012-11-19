@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>iPhone SDK Essential Training</key>
+	<string>Simon Allardice</string>
+	<key>iPhone SDK: Developing iPad Applications</key>
+	<string>Simon Allardice</string>
+	<key>iOS 4 App Development New Features</key>
+	<string>Simon Allardice</string>
+	<key>iOS 4: Building Data-Driven Applications</key>
+	<string>Bill Weinman</string>
+	<key>iOS 4 Web Applications with HTML5 and CSS3</key>
+	<string>Ray Villalobos</string>
+	<key>Objective-C Essential Training</key>
+	<string>Simon Allardice</string>
+	<key>Distributing iOS Applications Through the App Store</key>
+	<string>Bill Weinman</string>
+	<key>Flash Professional CS5: Creating a Simple Game for iOS</key>
+	<string>Todd Perkins</string>
+	<key>Building Android and iOS Applications with Flex</key>
+	<string>James Talbot</string>
+	<key>Xcode 4 New Features</key>
+	<string>Bill Weinman</string>
+	<key>Building Android and iOS Apps with Dreamweaver CS5</key>
+	<string>Joseph Lowery</string>
+	<key>Building and Monetizing Game Apps for iOS</key>
+	<string>Todd Perkins</string>
+	<key>iOS 5 SDK New Features</key>
+	<string>Simon Allardice</string>
+</dict>
+</plist>
