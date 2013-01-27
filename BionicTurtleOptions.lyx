@@ -644,6 +644,18 @@ Two puts:
 \begin_layout Standard
 Short call with 1 year maturity (strike = $20, premium = $1.99) +Long call
  with 1.25 year maturity (strike = $20, premium = $2.27)
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename CalendarSpread.pdf
+	lyxscale 70
+	scale 70
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -762,6 +774,18 @@ Why the (bottom) straddle?
  This illustrated straddle consists of a long call (strike @ $20, premium
  = $1.99) plus a long put (strike $20, premium = $1.20).
  This straddle is a “bottom straddle.”
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename Straddle.pdf
+	lyxscale 70
+	scale 70
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -887,6 +911,18 @@ Features of strip
 
 \begin_layout Itemize
 Strip: Like straddle, but biased toward downside 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename Strip.pdf
+	lyxscale 70
+	scale 70
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
