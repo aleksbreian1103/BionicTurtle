@@ -1,0 +1,423 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Hull, Chapter 2: Mechanics of Futures Markets
+\end_layout
+
+\begin_layout Standard
+After reading this chapter, you should be able to:
+\end_layout
+
+\begin_layout Itemize
+Define and describe the key features of a futures contract including the
+ asset, the contract price and size, delivery and limits.
+ 
+\end_layout
+
+\begin_layout Itemize
+Explain the convergence of futures and spot prices.
+ 
+\end_layout
+
+\begin_layout Itemize
+Describe the rationale for margin requirements and explain how they work.
+ 
+\end_layout
+
+\begin_layout Itemize
+Describe the role of a clearinghouse in futures transactions.
+ 
+\end_layout
+
+\begin_layout Itemize
+Describe the role of collateralization in the over‐the‐counter market and
+ compare it to the margining system.
+ 
+\end_layout
+
+\begin_layout Itemize
+Identify and describe the differences between a normal and inverted futures
+ market.
+ 
+\end_layout
+
+\begin_layout Itemize
+Describe the mechanics of the delivery process and contrast it with cash
+ settlement.
+ 
+\end_layout
+
+\begin_layout Itemize
+Define and demonstrate an understanding of the impact of different order
+ types, including: market, limit, stop‐loss, stop‐limit, market‐if‐touched,
+ discretionary, time‐of‐day, open, and fill‐or‐kill.
+\end_layout
+
+\begin_layout Itemize
+Describe the regulatory, accounting, and tax framework for the U.S.
+ Compare and contrast forward and futures contracts.
+ 
+\end_layout
+
+\begin_layout Subsection
+Define and describe the key features of a futures contract including the
+ asset, the contract price and size, delivery and limits.
+ 
+\end_layout
+
+\begin_layout Standard
+A futures contract is a 
+\series bold
+standardized
+\series default
+ 
+\series bold
+contract that trades on a futures exchange
+\series default
+ to buy or sell an underlying asset at a delivery date at a pre-set futures
+ price.
+ The specifications of a futures contract include, but are not limited to:
+ 
+\end_layout
+
+\begin_layout Enumerate
+Asset Contract Size 
+\end_layout
+
+\begin_layout Enumerate
+Delivery Arrangement 
+\end_layout
+
+\begin_layout Enumerate
+Delivery Months 
+\end_layout
+
+\begin_layout Enumerate
+Price Quotes 
+\end_layout
+
+\begin_layout Enumerate
+Price limits and position limits 
+\end_layout
+
+\begin_layout Standard
+For example, consider the underlying asset in the case of a Treasury bond/note:
+ A Treasury bond futures contract is made on the underlying U.S.
+ Treasury with maturity of at least 15 years and not callable within 15
+ years (15 years 
+\begin_inset Formula $\leq$
+\end_inset
+
+ T bond).
+ A Treasury note futures contract is made on the underlying U.S.
+ Treasury with maturity of at least 6.5 years but not greater than 10 years
+ (6.5 
+\begin_inset Formula $\leq$
+\end_inset
+
+ T note 
+\begin_inset Formula $\leq$
+\end_inset
+
+ 10 years).
+ When the asset is a commodity (e.g., cotton, orange juice), the exchange
+ specifies a grade (quality).
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Contract Size 
+\end_layout
+
+\begin_layout Standard
+Contract size varies by the type of futures contract: 
+\end_layout
+
+\begin_layout Itemize
+Treasury bond futures: contract size is a face value of $100,000 
+\end_layout
+
+\begin_layout Itemize
+S&P 500 futures contract is index × $250 (multiplier of 250X) 
+\end_layout
+
+\begin_layout Itemize
+NASDAQ futures contract is index × $100 (multiplier of 100X) 
+\end_layout
+
+\begin_layout Itemize
+Recently, “mini contracts” have been introduced: These have multipliers
+ of 50X for the S&P and 20X for the NASDAQ.
+ In other words, each contract is one-fifth the price in order to attract
+ smaller investors.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vphantom{}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 1
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+A common test question involves S&P 500 Index futures contract.
+ Please note the multiple for the S&P 500 contract is $250; e.g., if the index
+ value is 1400, then one contract is worth $350,00 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Delivery Arrangement 
+\end_layout
+
+\begin_layout Standard
+The exchange specifies delivery location.
+ The exchange must specify the delivery month; this can be the entire month
+ or a sub-period of the month.
+ Delivery Months The exchange must specify the precise period during the
+ month when delivery can be made.
+ For many futures contracts, the delivery period is the whole month.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Price Quotes 
+\end_layout
+
+\begin_layout Standard
+The exchange defines how prices are quoted; e.g., crude oil is quoted in dollars
+ and cents 
+\end_layout
+
+\begin_layout Subsubsection
+Price limits and position limits 
+\end_layout
+
+\begin_layout Subsection
+Long versus Short Positions: 
+\end_layout
+
+\begin_layout Standard
+A 
+\series bold
+long position
+\series default
+ agrees to 
+\shape italic
+buy in the future
+\shape default
+ and a 
+\series bold
+short position
+\series default
+ agrees to 
+\shape italic
+sell in the future
+\shape default
+.
+ The price mechanism maintains a balance between buyers and sellers.
+ For example, if there are more buyers than sellers, the price increases
+ until new sellers enter the futures market.
+ 
+\end_layout
+
+\begin_layout Standard
+Most futures contracts 
+\series bold
+do not lead to delivery
+\series default
+, because most trades “close out” their positions before delivery.
+ Closing out a position means entering into the opposite type of trade from
+ the original.
+ 
+\end_layout
+
+\begin_layout Subsection
+Exchanges and Regulation 
+\end_layout
+
+\begin_layout Itemize
+Chicago Board of Trade (CBOT, www.cbot.com) 
+\end_layout
+
+\begin_layout Itemize
+Chicago Mercantile Exchange (CME, www.cme.com) 
+\end_layout
+
+\begin_layout Itemize
+London International Financial Futures and Options Exchange (www.liffe.com)
+ 
+\end_layout
+
+\begin_layout Itemize
+Eurex (www.eurexchange.com) 
+\end_layout
+
+\begin_layout Quote
+Regulation: Commodity Futures Trading Commission (CFTC, www.cftc.gov) 
+\end_layout
+
+\begin_layout Subsubsection
+Explain the convergence of futures and spot prices 
+\end_layout
+
+\begin_layout Standard
+
+\family sans
+At the futures contract approaches maturity, the spot price should converge
+ with the futures price (at least to a so-called “zone of convergence”).
+ Put another way, the basis (the difference between the spot and futures
+ price) should converge toward zero as the futures contract approaches maturity.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\family sans
+In an (unrealistic) world where there is no risk premium, we can view this
+ as the forward price representing an estimate of the expected future spot
+ price, under the assumption that, as the maturity of its contract tends
+ toward to zero, the forward price will converge on the spot price:
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \space{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 1
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+If there is no risk premium, the forward price is an estimate of the expected
+ future spot price, with the forward price converging to the spot price
+ as we get close to maturity.
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+
+\size larger
+\color blue
+\begin_inset Formula ${\color{black}S_{0}=E\left[S{}_{T}\right]\Rightarrow F_{0}=S_{0}e^{rT}}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+
+\end_layout
+
+\end_body
+\end_document
