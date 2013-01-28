@@ -199,7 +199,11 @@ Stock:
 \series bold
 Covered call:
 \series default
- Long stock @ $20 + Short call Strike @ $20 (premium = $1.99) 
+ Long stock @ $20 + Short call (
+\begin_inset Formula $K{}_{short\, call}=\$20$
+\end_inset
+
+, premium = $1.99) 
 \begin_inset Newline newline
 \end_inset
 
@@ -337,7 +341,11 @@ Stock:
 \series bold
 Protective put:
 \series default
- Long stock @ $20 + Long put Strike @ $20 (premium = $1.20)
+ Long stock @ $20 + Long put (
+\begin_inset Formula $K{}_{long\, put}=\$20$
+\end_inset
+
+, premium = $1.20)
 \begin_inset Formula $\phantom{}$
 \end_inset
 
@@ -460,8 +468,15 @@ Stock:
 \series bold
 Protective put:
 \series default
- Long call @ strike = $20 (premium = $1.99) + short call @ strike = $23 (premium
- = $0.83)
+ Long call (
+\begin_inset Formula $K{}_{long\, call}=\$20$
+\end_inset
+
+, premium = $1.99) + short call (
+\begin_inset Formula $K{}_{short\, call}=\$23$
+\end_inset
+
+, premium = $0.83)
 \end_layout
 
 \begin_layout Standard
@@ -563,7 +578,15 @@ Stock:
 \series bold
 Protective put:
 \series default
- Long put @ $23 (premium = -$2.93) + short put @ $20 (premium = $1.20)
+ Long put 
+\begin_inset Formula $K{}_{long\, put}=\$23$
+\end_inset
+
+, premium = -$2.93) + short put (
+\begin_inset Formula $K{}_{short\, put}=\$20$
+\end_inset
+
+, premium = $1.20)
 \end_layout
 
 \begin_layout Standard
@@ -587,17 +610,9 @@ Buy a call option at low strike price K1, buy a call option with high strike
  K1 and K2.
  In this example, the butterfly spread: Long call (strike @ $18, premium
  = $3.21), long call (strike @ $22, premium = $1.13 ), short two calls (strike
- @ $20, premium = $1.99)
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-Features of butterfly spread: 
-\end_layout
-
-\begin_layout Itemize
-Expects low volatility (range-bound), Capped risk
+ @ $20, premium = $1.99).
+ Why the bytterfly? The investor expects low volatility (range-bound), and
+ wants to cap her risk.
 \begin_inset Newline newline
 \end_inset
 
@@ -612,6 +627,22 @@ Expects low volatility (range-bound), Capped risk
 
 \end_layout
 
+\begin_layout Standard
+
+\series bold
+Payoff:
+\series default
+ Red; 
+\series bold
+Option:
+\series default
+ Green; 
+\series bold
+Stock:
+\series default
+ Blue
+\end_layout
+
 \begin_layout Subsubsection
 Calendar spread
 \end_layout
@@ -623,27 +654,23 @@ In a calendar spread, the options have the same strike price but different
  
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 
 \series bold
 Two calls:
 \series default
  sell a call option with strike price K1 and buy a call option with same
- strike price K1 but with a longer maturity term 
+ strike price K1 but with a longer maturity term.
+ 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 
 \series bold
 Two puts:
 \series default
  sell a put option with strike price K1 and buy a put option with same strike
- price K1 but with a longer maturity term
-\end_layout
-
-\begin_layout Standard
-Short call with 1 year maturity (strike = $20, premium = $1.99) +Long call
- with 1.25 year maturity (strike = $20, premium = $2.27)
+ price K1 but with a longer maturity term.
 \begin_inset Newline newline
 \end_inset
 
@@ -658,6 +685,36 @@ Short call with 1 year maturity (strike = $20, premium = $1.99) +Long call
 
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+Payoff:
+\series default
+ Red; 
+\series bold
+Option:
+\series default
+ Green; 
+\series bold
+Stock:
+\series default
+ Blue
+\end_layout
+
+\begin_layout Standard
+Short call with 1y maturity (
+\begin_inset Formula $K{}_{short\, call}=\$20$
+\end_inset
+
+, premium = $1.99) + Long call with 1.25y maturity (
+\begin_inset Formula $K{}_{long\, call}=\$20$
+\end_inset
+
+, premium = $2.27)
+\end_layout
+
+\end_deeper
 \begin_layout Subsubsection
 Diagonal spread
 \end_layout
@@ -789,6 +846,34 @@ Why the (bottom) straddle?
 \end_layout
 
 \begin_layout Standard
+
+\series bold
+Payoff:
+\series default
+ Red; 
+\series bold
+Option:
+\series default
+ Green; 
+\series bold
+Stock:
+\series default
+ Blue
+\end_layout
+
+\begin_layout Standard
+Long call (
+\begin_inset Formula $K{}_{long\, call}=\$20$
+\end_inset
+
+, premium = $1.99) plus a long put (
+\begin_inset Formula $K{}_{long\, put}=\$20$
+\end_inset
+
+, premium = $1.20)
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula $\phantom{}$
 \end_inset
 
@@ -898,19 +983,47 @@ Why the strip?
  The investor bets on a large stock price move but considers a decrease
  more likely than an increase.
  This illustrated strip consists of a long call (strike @ $20, premium =
- $1.99) plus two long puts (strike @ $20, premium = $1.20)
+ $1.99) plus two long puts (strike @ $20, premium = $1.20).
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename Strip.pdf
+	lyxscale 70
+	scale 70
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 
 \series bold
-Features of strip
+Payoff:
 \series default
- 
+ Red; 
+\series bold
+Option:
+\series default
+ Green; 
+\series bold
+Stock:
+\series default
+ Blue
 \end_layout
 
-\begin_layout Itemize
-Strip: Like straddle, but biased toward downside 
+\begin_layout Standard
+Long call (
+\begin_inset Formula $K{}_{long\, call}=\$20$
+\end_inset
+
+, premium = $1.99) plus two long puts (
+\begin_inset Formula $K{}_{long\, put}=\$20$
+\end_inset
+
+, premium = $1.20)
 \end_layout
 
 \begin_layout Subsubsection
@@ -931,22 +1044,52 @@ long position in two calls and one put
 \series bold
 Why the strap?
 \series default
- Like the strip, the investor bets on a large stock price movement but instead
- considers an increase more likely.
+ Like the strip, the investor bets on a large stock price movement, but
+ instead considers an increase more likely.
+ In this regard a strap is also similar to a straddle, but in this case
+ we are biased upwards.
  This illustrated strap consists of two long calls (strike @ $20, premium
- = $1.99) plus a long put (strike @ $20, premium = $1.20)
+ = $1.99) plus a long put (strike @ $20, premium = $1.20).
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename Strap.pdf
+	lyxscale 70
+	scale 70
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 
 \series bold
-Features of strap
+Payoff:
 \series default
- 
+ Red; 
+\series bold
+Option:
+\series default
+ Green; 
+\series bold
+Stock:
+\series default
+ Blue
 \end_layout
 
-\begin_layout Itemize
-Strap: Like straddle, but biased toward upside 
+\begin_layout Standard
+Two long calls (
+\begin_inset Formula $K{}_{long\, call}=\$20$
+\end_inset
+
+, premium = $1.99) plus a long put (
+\begin_inset Formula $K{}_{long\, put}=\$20$
+\end_inset
+
+, premium = $1.20)
 \end_layout
 
 \begin_layout Subsubsection
@@ -969,17 +1112,50 @@ Why the strangle?
 \series default
  The investor is betting on a large price movement (similar to the straddle).
  This illustrated strangle is a long call (strike @ $22, premium = $1.13)
- plus a long put (strike $18 premium = $0.51)
+ plus a long put (strike $18 premium = $0.51).
+ A strangle is similar to a straddle but cheaper to install, however; this
+ comes at the cost of requiring more extreme price movements than with the
+ straddle.
+ Consequently, this is a strategy that is bullish on volatility.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Strangle.pdf
+	lyxscale 70
+	scale 70
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 
 \series bold
-Features of strap 
+Payoff:
+\series default
+ Red; 
+\series bold
+Option:
+\series default
+ Green; 
+\series bold
+Stock:
+\series default
+ Blue
 \end_layout
 
-\begin_layout Itemize
-Strangle: like a straddle but cheaper to install 
+\begin_layout Standard
+Long call (
+\begin_inset Formula $K{}_{long\, call}=\$22$
+\end_inset
+
+, premium = $1.13) plus a long put ((
+\begin_inset Formula $K{}_{long\, put}=\$18$
+\end_inset
+
+, premium = $0.51)
 \end_layout
 
 \begin_layout Subsubsection
@@ -1023,10 +1199,6 @@ Compute the pay-offs of combination strategies.
 
 \begin_layout Standard
 Please see the practice question (PDF) set.
- 
-\series bold
-[Elaborate on this with one or two examples, possibly from question PDF
- in order to enhance understanding and retention]
 \end_layout
 
 \begin_layout Standard
@@ -1047,10 +1219,94 @@ The options strategies we have seen are but a few of the many that are used
  on a daily basis.
  However, they form the basis of many such strategies.
  That is, a combination of the strategies we have reviewed can be used to
- construct any Options strategy - your imagination (and wallet) is the limit.
- 
-\series bold
-[Placeholder for brief summary of material and key points]
+ construct any options strategy - your imagination (and wallet) is the limit.
+ It is important to note that, while several of the strategies seem to lock
+ in a guaranteed profit, or have a seemingly high probability of making
+ money, this is largely an illusion due to the transaction costs involved
+ - and the spread between the bid and the ask price actually observed in
+ the market.
+ We can generalize this further: typically, only when your expectations
+ differ from that of the market will there be a genuine money-making opportunity.
+ However, going against the market can pose a significant risk as options
+ enable you to leverage your positions in a way that regular stocks and
+ bonds do not.
+ That being said, there are many scenarios in which putting on any of the
+ afore mentioned options strategies would makes sense.
+ The primary reason why we would want to do this is to hedge our risk, and
+ the secondary reason is that we simpy hold a different view than the market
+ and are making an informed bet.
+ Investment banks are typically more than willing to act as market makers
+ as, on average, they end up with a net profit due to this sort of market
+ making.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+After reading this chapter (and doing the accompanying exercises in the
+ separate PDF) you should be able to define and calculate the payoff of
+ a:
+\end_layout
+
+\begin_layout Itemize
+Principal-protected note
+\end_layout
+
+\begin_layout Itemize
+Covered call
+\end_layout
+
+\begin_layout Itemize
+Protective put
+\end_layout
+
+\begin_layout Itemize
+Bull spread
+\end_layout
+
+\begin_layout Itemize
+Bear spread
+\end_layout
+
+\begin_layout Itemize
+Butterfly spread
+\end_layout
+
+\begin_layout Itemize
+Calendar spread
+\end_layout
+
+\begin_layout Itemize
+Diagonal spread
+\end_layout
+
+\begin_layout Itemize
+Box spread
+\end_layout
+
+\begin_layout Itemize
+Straddle
+\end_layout
+
+\begin_layout Itemize
+Strap
+\end_layout
+
+\begin_layout Itemize
+Strip
+\end_layout
+
+\begin_layout Itemize
+Strangle
+\end_layout
+
+\begin_layout Standard
+You should also be able to specify under what circumstances each of these
+ strategies would be appropriate to put on, and you should know which strategies
+ are direction neutral with respect to a risk factor, and which ones are
+ not.
 \end_layout
 
 \begin_layout Standard
@@ -1079,12 +1335,7 @@ options strategies
 \begin_inset Quotes erd
 \end_inset
 
- over a single call or put option?
-\end_layout
-
-\begin_layout Enumerate
-How is a butterfly strategy created, what is its payoff and when would one
- potentially use it?
+ over a single call or put option investment?
 \end_layout
 
 \begin_layout Enumerate
@@ -1113,6 +1364,15 @@ Writing (selling) naked call options
 \end_layout
 
 \end_deeper
+\begin_layout Enumerate
+An asset manager tells you he wants to go long a straddle because he has
+ a bullish view on volatility (and the movement of the stock price).
+ The asset manager tells you that this strategy is always superior to a
+ strangle, since you need less of a price movement in order to be net In-the-Mon
+ey.
+ Is the asset manager right? Why or why not?
+\end_layout
+
 \begin_layout Enumerate
 An investor wants to hedge her bond portfolio.
  Being sensitive to interest rate the investor decides to sell a call option
@@ -1205,13 +1465,11 @@ Answers
 
 \begin_layout Enumerate
 One of the primary goals of the various options strategies is to hedge against
- exposure from different risk factors
-\end_layout
-
-\begin_layout Enumerate
-A butterfly 
-\series bold
-[placeholder for explanation/answer]
+ exposure from different risk factors.
+ The different options strategies also enables investors to take a view
+ on risk factors other than those associated with just the underlying stock;
+ indeed, we have seen that there are a number of ways to take advantage
+ of a view on e.g., volatility.
 \end_layout
 
 \begin_layout Enumerate
@@ -1224,6 +1482,14 @@ When volatility is about to drop, you want to enter into a direction neutral
 Both a, b and c have bounded losses, whereas the potential loss from d is
  unbounded (limiteless).
  Thus, writing naked call options is the riskier of the strategies.
+\end_layout
+
+\begin_layout Enumerate
+The asset manager is wrong.
+ While it is true that the straddle requires less of an uptick in volatility
+ (and movement in the stock price in either direction) to make money than
+ with a strangle, this comes at the cost of higer risk downside risk if
+ the stock is OTM at expiration.
 \end_layout
 
 \begin_layout Enumerate
