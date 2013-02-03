@@ -1,0 +1,1544 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman palatino
+\font_sans helvet
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\boxbgcolor #b8df98
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+\size large
+Hull, Chapter 11: Trading Strategies Involving Options
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 1
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Subsubsection*
+Learning Outcomes:
+\end_layout
+
+\begin_layout Description
+Explain the motivation to initiate a covered call or a protective put strategy.
+ 
+\end_layout
+
+\begin_layout Description
+Describe and explain the use and payoff functions of spread strategies,
+ including bull spread, bear spread, calendar spread, butterfly spread,
+ and diagonal spread.
+\end_layout
+
+\begin_layout Description
+Calculate the pay‐offs of various spread strategies.
+ 
+\end_layout
+
+\begin_layout Description
+Describe and explain the use and payoff functions of combination strategies,
+ including straddles, strangles, strips, or straps.
+ 
+\end_layout
+
+\begin_layout Description
+Compute the pay‐offs of combination strategies 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+
+\size normal
+Explain the motivation to initiate a covered call or a protective put strategy
+ and calculate the payoff functions of the respective strategies
+\end_layout
+
+\begin_layout Subsubsection
+Covered Call
+\end_layout
+
+\begin_layout Standard
+To “write a covered call” is combine a long stock position with a short
+ position in a call option.
+ Writing a covered call = long stock + short call option.
+ In many cases, the call option is out-of-the-money.
+ The rationale of the covered call is either:
+\end_layout
+
+\begin_layout Enumerate
+To generate income via the sale of the short call, or 
+\end_layout
+
+\begin_layout Enumerate
+To cover the cost of the potential short call payoff with the stock.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\phantom{}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename CoveredCall.pdf
+	lyxscale 70
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Payoff:
+\series default
+ Red; 
+\series bold
+Option:
+\series default
+ Green; 
+\series bold
+Stock:
+\series default
+ Blue
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Covered call:
+\series default
+ Long stock @ $20 + Short call (
+\begin_inset Formula $K{}_{short\, call}=\$20$
+\end_inset
+
+, premium = $1.99) 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Writing a covered call is an income strategy, that is, we will enter into
+ this trade if our outlook is neutral to bullish.
+ That is, if the stock rises significantly, the call option will be excercised;
+ however, we have the underlying to protect ourselves from that scenario.
+ On the other hand, by writing a call option we collect the premium, thus
+ if the stock price stays about the same or rises modestly, we collect the
+ premium.
+ We can then use this strategy by 
+\shape italic
+rolling over
+\shape default
+ the options each month, collecting our premium.
+ At first look we might view this as an easy way to generate a healthy income
+ each month.
+ However, chances are that we are not the only ones who have thought of
+ this, hence, it will be priced into the option.
+ Accordingly, over time, when we take into account the transaction costs
+ we incur, as well as the fact that from time to time the option will get
+ exercised, this is a poor income generating strategy.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\phantom{}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 1
+use_makebox 0
+width "90col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\noun on
+Important Concept:
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+If the payoff strategy looks like a short put option, that's because it
+ is! Remember the put-call parity 
+\begin_inset Formula $S{}_{0}-c=Ke^{-rt}-p$
+\end_inset
+
+.
+ We can infer from this that going long the stock and short a call is the
+ same as going short a put with the PV of the strike price in the bank.
+ By knowing the intuition behind the put-call parity you can often reason
+ your way to the answer!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Protective Put
+\end_layout
+
+\begin_layout Standard
+A protective put can be thought of as a form of insurance.
+ Indeed, looking at the strategy and the payoff, it looks like we have created
+ a 
+\shape italic
+synthetic call option
+\shape default
+! Again, the put-call parity comes in handy.
+ Now, it is tempting to think that having protective puts on your portfolio
+ and rolling them over at maturity is a great way to benefit from the potential
+ increase in the stock price while having our losses capped.
+ However, the premium paid and transaction costs incurred dillute the profits
+ form such a strategy, just like in the case of the Covered call.
+ We can generalize this concept further by noting that, after adjusting
+ for risk, there is no one strategy that offers an easy way to make money
+ in a [weak form] efficient market.
+ There is no free lunch.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ProtectivePut.pdf
+	lyxscale 70
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\phantom{}$
+\end_inset
+
+
+\series bold
+Payoff:
+\series default
+ Red; 
+\series bold
+Option:
+\series default
+ Green; 
+\series bold
+Stock:
+\series default
+ Blue
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Protective put:
+\series default
+ Long stock @ $20 + Long put (
+\begin_inset Formula $K{}_{long\, put}=\$20$
+\end_inset
+
+, premium = $1.20)
+\begin_inset Formula $\phantom{}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\phantom{}$
+\end_inset
+
+
+\begin_inset Formula $\phantom{}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 1
+use_makebox 0
+width "90col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\noun on
+Important Concept:
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+The covered call generate income (the short call option premium) when the
+ (long) stock holder does not expect further price appreciation on the long
+ position.
+ The protective put forfeits some income (the long put option premium) in
+ exchange for downside protection.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+
+\size normal
+Describe and explain the use and payoff functions of spread strategies,
+ including bull spread, bear spread, calendar spread, butterfly spread,
+ and diagonal spread.
+\end_layout
+
+\begin_layout Standard
+A spread strategy is a position with two or more options of the same type,
+ i.e., two or more calls; or, two or more puts.
+\end_layout
+
+\begin_layout Subsubsection
+Bull spread (type of vertical spread)
+\end_layout
+
+\begin_layout Standard
+A bull spread can be created by writing a call with, e.g.
+ strike 
+\begin_inset Formula $K{}_{short}=23$
+\end_inset
+
+, while going long a call with a lower strike price, 
+\begin_inset Formula $K{}_{long}=20$
+\end_inset
+
+, on the same stock (with the same expiration).
+ In this example, we go long a call @ strike = $20, with a premium = $1.99
+ + short call @ strike = $23, with a premium = $0.83.
+ When creating a bull spread using call uptions there is always a cash outflow;
+ conversely, when creating a bull spread using put options there is always
+ a cash inflow.
+ In both cases we are bullish, as the name implies, and thus expect the
+ price of the underlying to increase.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename BullSpread.pdf
+	lyxscale 70
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Payoff:
+\series default
+ Red; 
+\series bold
+Option:
+\series default
+ Green; 
+\series bold
+Stock:
+\series default
+ Blue
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Protective put:
+\series default
+ Long call (
+\begin_inset Formula $K{}_{long\, call}=\$20$
+\end_inset
+
+, premium = $1.99) + short call (
+\begin_inset Formula $K{}_{short\, call}=\$23$
+\end_inset
+
+, premium = $0.83)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\phantom{}$
+\end_inset
+
+
+\begin_inset Formula $\phantom{}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Bear spread (type of vertical spread)
+\end_layout
+
+\begin_layout Standard
+A bear spread can be created by writing a put option with, e.g., strike 
+\begin_inset Formula $K{}_{short}=20$
+\end_inset
+
+, while going long a put with a higher strike price 
+\begin_inset Formula $K{}_{long}=23$
+\end_inset
+
+, on the same stock (with the same expiration).
+ It is important to note that we can create a bear spread either using put
+ options or call options (think about the payoff profile in terms of the
+ put-call parity).
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+When creating a bear spread using put options there is always a cash outflow,
+ whereas when creating a bear spread with calls we have a cash inflow.
+ In this latter case we would simply buy a call and sell a call but our
+ strike price on the long call is higher than on the short call: 
+\begin_inset Formula $K{}_{long\, call}>K_{short\, call}$
+\end_inset
+
+ .
+ In both cases we are bearish as the name implies and thus expect the underlying
+ stock price to decline.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+As the graph below show, we have a range of possible payoff scenarios, however;
+ our loss is capped at $0 (exluding the premium), while our gain is capped
+ at 
+\begin_inset Formula $K{}_{2}-K_{1}$
+\end_inset
+
+ (exluding the premium).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename BearSpread.pdf
+	lyxscale 70
+	scale 70
+
+\end_inset
+
+
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Payoff:
+\series default
+ Red; 
+\series bold
+Option:
+\series default
+ Green; 
+\series bold
+Stock:
+\series default
+ Blue
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Protective put:
+\series default
+ Long put 
+\begin_inset Formula $K{}_{long\, put}=\$23$
+\end_inset
+
+, premium = -$2.93) + short put (
+\begin_inset Formula $K{}_{short\, put}=\$20$
+\end_inset
+
+, premium = $1.20)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\phantom{}$
+\end_inset
+
+
+\begin_inset Formula $\phantom{}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Butterfly spread (sideway strategy) 
+\end_layout
+
+\begin_layout Standard
+Buy a call option at low strike price K1, buy a call option with high strike
+ price K3, and sell two call options at strike price K2 halfway between
+ K1 and K2.
+ In this example, the butterfly spread: Long call (strike @ $18, premium
+ = $3.21), long call (strike @ $22, premium = $1.13 ), short two calls (strike
+ @ $20, premium = $1.99).
+ Why the bytterfly? The investor expects low volatility (range-bound), and
+ wants to cap her risk.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename Butterfly.pdf
+	lyxscale 70
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Payoff:
+\series default
+ Red; 
+\series bold
+Option:
+\series default
+ Green; 
+\series bold
+Stock:
+\series default
+ Blue
+\end_layout
+
+\begin_layout Subsubsection
+Calendar spread
+\end_layout
+
+\begin_layout Standard
+In a calendar spread, the options have the same strike price but different
+ expiration dates.
+ The calendar spread can be created with calls or puts.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Two calls:
+\series default
+ sell a call option with strike price K1 and buy a call option with same
+ strike price K1 but with a longer maturity term.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Two puts:
+\series default
+ sell a put option with strike price K1 and buy a put option with same strike
+ price K1 but with a longer maturity term.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename CalendarSpread.pdf
+	lyxscale 70
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+Payoff:
+\series default
+ Red; 
+\series bold
+Option:
+\series default
+ Green; 
+\series bold
+Stock:
+\series default
+ Blue
+\end_layout
+
+\begin_layout Standard
+Short call with 1y maturity (
+\begin_inset Formula $K{}_{short\, call}=\$20$
+\end_inset
+
+, premium = $1.99) + Long call with 1.25y maturity (
+\begin_inset Formula $K{}_{long\, call}=\$20$
+\end_inset
+
+, premium = $2.27)
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection
+Diagonal spread
+\end_layout
+
+\begin_layout Standard
+In a diagonal spread, both the expiration date and the strike price of the
+ calls are different.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Box spread 
+\end_layout
+
+\begin_layout Standard
+A box spread is a combination of a bull call spread with strike prices K1
+ and K2 and a bear put spread with the same two strike prices.
+ The payoff from a box spread is always K2 – K1.
+ The value of the box spread is always the present value of its payoff or
+ 
+\shape italic
+
+\begin_inset Formula $\left(K2-K1\right)\times e^{-rT}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\phantom{}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 1
+use_makebox 0
+width "90col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\noun on
+Important Concept:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\phantom{}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+A box spread arbitrage only works with European options
+\begin_inset Quotes erd
+\end_inset
+
+ (Hull)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+
+\size normal
+Describe and explain the use and payoff functions of combination strategies,
+ including straddles, strangles, strips, or straps 
+\end_layout
+
+\begin_layout Standard
+A combination strategy involves taking a position in both call(s) and put(s)
+ on the same stock 
+\end_layout
+
+\begin_layout Subsubsection
+Straddle 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+To straddle
+\series default
+ is to 
+\shape italic
+buy a call and buy a put
+\shape default
+ on the same stock with same strike price and expiration date.
+ 
+\series bold
+Why the (bottom) straddle?
+\series default
+ The investor expects a large move in either direction.
+ The worst-case scenario is that the stock settles at the strike price:
+ the investor has paid two premiums but does not receive any payoffs.
+ This illustrated straddle consists of a long call (strike @ $20, premium
+ = $1.99) plus a long put (strike $20, premium = $1.20).
+ This straddle is a “bottom straddle.”
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename Straddle.pdf
+	lyxscale 70
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Payoff:
+\series default
+ Red; 
+\series bold
+Option:
+\series default
+ Green; 
+\series bold
+Stock:
+\series default
+ Blue
+\end_layout
+
+\begin_layout Standard
+Long call (
+\begin_inset Formula $K{}_{long\, call}=\$20$
+\end_inset
+
+, premium = $1.99) plus a long put (
+\begin_inset Formula $K{}_{long\, put}=\$20$
+\end_inset
+
+, premium = $1.20)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\phantom{}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 1
+use_makebox 0
+width "90col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\noun on
+Important Concept:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\phantom{}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+A straddle is a
+\series bold
+ direction neutral volatility strategy
+\series default
+: we don't mind which way the underlying moves.
+ As an example, a
+\series bold
+ bottom straddle
+\series default
+ involves buying both a call and a put with the same strike price and expiration
+ date.
+ In this case, as long as the price move sufficiently, we are invariant
+ to which way it moves.
+ Conversely, for a 
+\series bold
+top straddle
+\series default
+, we want the price to deviate from the strike as little as possible.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\phantom{}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+A top straddle
+\series default
+ (or straddle write) is to 
+\shape italic
+sell a call and sell a put
+\shape default
+ on the same stock with same strike price and expiration date.
+ 
+\series bold
+Why the top straddle?
+\series default
+ The investor is highly confident that the stock will not stray from the
+ strike price in either direction.
+ If the stock price equals the strike price, the investor has collected
+ two premiums for profit.
+ This is a very risky strategy however, because the potential loss is unlimited.
+ As you can see, a top straddle is also a direction neutral volatility strategy;
+ however, unlike with the bottom straddle, we want little to no movement
+ in the underlying.
+\end_layout
+
+\begin_layout Subsubsection
+Strip 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Strip:
+\series default
+ To take a long position in one call and two puts with same strike price
+ and expiration date.
+ 
+\series bold
+Why the strip?
+\series default
+ The investor bets on a large stock price move but considers a decrease
+ more likely than an increase.
+ This illustrated strip consists of a long call (strike @ $20, premium =
+ $1.99) plus two long puts (strike @ $20, premium = $1.20).
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename Strip.pdf
+	lyxscale 70
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Payoff:
+\series default
+ Red; 
+\series bold
+Option:
+\series default
+ Green; 
+\series bold
+Stock:
+\series default
+ Blue
+\end_layout
+
+\begin_layout Standard
+Long call (
+\begin_inset Formula $K{}_{long\, call}=\$20$
+\end_inset
+
+, premium = $1.99) plus two long puts (
+\begin_inset Formula $K{}_{long\, put}=\$20$
+\end_inset
+
+, premium = $1.20)
+\end_layout
+
+\begin_layout Subsubsection
+Strap 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Strap:
+\series default
+ To take a 
+\shape italic
+long position in two calls and one put
+\shape default
+ with same strike price and expiration date.
+ 
+\series bold
+Why the strap?
+\series default
+ Like the strip, the investor bets on a large stock price movement, but
+ instead considers an increase more likely.
+ In this regard a strap is also similar to a straddle, but in this case
+ we are biased upwards.
+ This illustrated strap consists of two long calls (strike @ $20, premium
+ = $1.99) plus a long put (strike @ $20, premium = $1.20).
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename Strap.pdf
+	lyxscale 70
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Payoff:
+\series default
+ Red; 
+\series bold
+Option:
+\series default
+ Green; 
+\series bold
+Stock:
+\series default
+ Blue
+\end_layout
+
+\begin_layout Standard
+Two long calls (
+\begin_inset Formula $K{}_{long\, call}=\$20$
+\end_inset
+
+, premium = $1.99) plus a long put (
+\begin_inset Formula $K{}_{long\, put}=\$20$
+\end_inset
+
+, premium = $1.20)
+\end_layout
+
+\begin_layout Subsubsection
+Strangle
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Strangle:
+\series default
+ To 
+\shape italic
+buy a put and a call
+\shape default
+ with the same expiration and different strike prices.
+ 
+\series bold
+Why the strangle?
+\series default
+ The investor is betting on a large price movement (similar to the straddle).
+ This illustrated strangle is a long call (strike @ $22, premium = $1.13)
+ plus a long put (strike $18 premium = $0.51).
+ A strangle is similar to a straddle but cheaper to install, however; this
+ comes at the cost of requiring more extreme price movements than with the
+ straddle.
+ Consequently, this is a strategy that is bullish on volatility.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Strangle.pdf
+	lyxscale 70
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Payoff:
+\series default
+ Red; 
+\series bold
+Option:
+\series default
+ Green; 
+\series bold
+Stock:
+\series default
+ Blue
+\end_layout
+
+\begin_layout Standard
+Long call (
+\begin_inset Formula $K{}_{long\, call}=\$22$
+\end_inset
+
+, premium = $1.13) plus a long put ((
+\begin_inset Formula $K{}_{long\, put}=\$18$
+\end_inset
+
+, premium = $0.51)
+\end_layout
+
+\begin_layout Subsubsection
+Collar and costless collar
+\end_layout
+
+\begin_layout Standard
+A collar (sometimes also referred to as a 
+\shape italic
+fence
+\shape default
+)
+\shape italic
+ 
+\shape default
+is a combination strategy where we own the underlying, sell a call option
+ with a strike price less than the curent price of the underlying (
+\begin_inset Formula $K{}_{call}>S$
+\end_inset
+
+ ), and buy a put option with a strike price less than the current price
+ of the underlying (
+\begin_inset Formula $K{}_{put}<S$
+\end_inset
+
+).
+ This strategy gives us a range of profit or losses.
+ When the premium collected from writing the call exactly matches the premium
+ paid for the put, we have what is called a zero cost, or 
+\shape italic
+costless collar
+\shape default
+.
+\end_layout
+
+\begin_layout Subsection
+
+\size normal
+Compute the pay-offs of combination strategies.
+\end_layout
+
+\begin_layout Standard
+Please see the practice question (PDF) set.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+
+\size normal
+Summary of Options Strategies
+\end_layout
+
+\begin_layout Standard
+The options strategies we have seen are but a few of the many that are used
+ on a daily basis.
+ However, they form the basis of many such strategies.
+ That is, a combination of the strategies we have reviewed can be used to
+ construct any options strategy - your imagination (and wallet) is the limit.
+ It is important to note that, while several of the strategies seem to lock
+ in a guaranteed profit, or have a seemingly high probability of making
+ money, this is largely an illusion due to the transaction costs involved
+ - and the spread between the bid and the ask price actually observed in
+ the market.
+ We can generalize this further: typically, only when your expectations
+ differ from that of the market will there be a genuine money-making opportunity.
+ However, going against the market can pose a significant risk as options
+ enable you to leverage your positions in a way that regular stocks and
+ bonds do not.
+ That being said, there are many scenarios in which putting on any of the
+ afore mentioned options strategies would makes sense.
+ The primary reason why we would want to do this is to hedge our risk, and
+ the secondary reason is that we simpy hold a different view than the market
+ and are making an informed bet.
+ Investment banks are typically more than willing to act as market makers
+ as, on average, they end up with a net profit due to this sort of market
+ making.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+After reading this chapter (and doing the accompanying exercises in the
+ separate PDF) you should be able to define and calculate the payoff of
+ a:
+\end_layout
+
+\begin_layout Itemize
+Principal-protected note
+\end_layout
+
+\begin_layout Itemize
+Covered call
+\end_layout
+
+\begin_layout Itemize
+Protective put
+\end_layout
+
+\begin_layout Itemize
+Bull spread
+\end_layout
+
+\begin_layout Itemize
+Bear spread
+\end_layout
+
+\begin_layout Itemize
+Butterfly spread
+\end_layout
+
+\begin_layout Itemize
+Calendar spread
+\end_layout
+
+\begin_layout Itemize
+Diagonal spread
+\end_layout
+
+\begin_layout Itemize
+Box spread
+\end_layout
+
+\begin_layout Itemize
+Straddle
+\end_layout
+
+\begin_layout Itemize
+Strap
+\end_layout
+
+\begin_layout Itemize
+Strip
+\end_layout
+
+\begin_layout Itemize
+Strangle
+\end_layout
+
+\begin_layout Standard
+You should also be able to specify under what circumstances each of these
+ strategies would be appropriate to put on, and you should know which strategies
+ are direction neutral with respect to a risk factor, and which ones are
+ not.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+
+\size normal
+Concept check - questions & answers
+\end_layout
+
+\begin_layout Subsubsection
+Questions
+\end_layout
+
+\begin_layout Enumerate
+What are some of the benefits of 
+\begin_inset Quotes eld
+\end_inset
+
+options strategies
+\begin_inset Quotes erd
+\end_inset
+
+ over a single call or put option investment?
+\end_layout
+
+\begin_layout Enumerate
+You believe volatility is about to drop, what is the appropriate strategy?
+\end_layout
+
+\begin_layout Enumerate
+Of the following options strategies, which one is the riskier?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Buing a bull spread
+\end_layout
+
+\begin_layout Enumerate
+Buying a bear spread
+\end_layout
+
+\begin_layout Enumerate
+Writing (selling) naked put options
+\end_layout
+
+\begin_layout Enumerate
+Writing (selling) naked call options
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+An asset manager tells you he wants to go long a straddle because he has
+ a bullish view on volatility (and the movement of the stock price).
+ The asset manager tells you that this strategy is always superior to a
+ strangle, since you need less of a price movement in order to be net In-the-Mon
+ey.
+ Is the asset manager right? Why or why not?
+\end_layout
+
+\begin_layout Enumerate
+An investor wants to hedge her bond portfolio.
+ Being sensitive to interest rate the investor decides to sell a call option
+ with 
+\begin_inset Formula $K{}_{call}>S$
+\end_inset
+
+ to finance entirely the cost of going long a put option where 
+\begin_inset Formula $K{}_{put}<S$
+\end_inset
+
+ which hedges against an increase in interest rate (remember the value of
+ a portfolio of bonds decreases when the payments are discounted more heavily).
+ Which options strategy is the investor employing?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Butterfly
+\end_layout
+
+\begin_layout Enumerate
+Costless collar
+\end_layout
+
+\begin_layout Enumerate
+Strangle
+\end_layout
+
+\begin_layout Enumerate
+Box spread
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+You are bearish on the market (you think the market will go down) so you
+ decide to the following options, all with the same maturity: buy a put
+ with 
+\begin_inset Formula $K{}_{put}=\$49$
+\end_inset
+
+ for $8, sell two puts with 
+\begin_inset Formula $K{}_{put}=\$40$
+\end_inset
+
+ for $5 each, and buying one put where 
+\begin_inset Formula $K{}_{put}=\$36$
+\end_inset
+
+ for $3.
+ If at maturity the underlying trades at 
+\begin_inset Formula $S=\$34$
+\end_inset
+
+, what is the profit of your trade?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+$3
+\end_layout
+
+\begin_layout Enumerate
+$4
+\end_layout
+
+\begin_layout Enumerate
+$5
+\end_layout
+
+\begin_layout Enumerate
+$6
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Why does a box spread arbitrage only work with European options? 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Answers
+\end_layout
+
+\begin_layout Enumerate
+One of the primary goals of the various options strategies is to hedge against
+ exposure from different risk factors.
+ The different options strategies also enables investors to take a view
+ on risk factors other than those associated with just the underlying stock;
+ indeed, we have seen that there are a number of ways to take advantage
+ of a view on e.g., volatility.
+\end_layout
+
+\begin_layout Enumerate
+When volatility is about to drop, you want to enter into a direction neutral
+ volatility strategy, hoping that the underlying will barely move.
+ In this case the appropriate strategy is a top straddle.
+\end_layout
+
+\begin_layout Enumerate
+Both a, b and c have bounded losses, whereas the potential loss from d is
+ unbounded (limiteless).
+ Thus, writing naked call options is the riskier of the strategies.
+\end_layout
+
+\begin_layout Enumerate
+The asset manager is wrong.
+ While it is true that the straddle requires less of an uptick in volatility
+ (and movement in the stock price in either direction) to make money than
+ with a strangle, this comes at the cost of higer risk downside risk if
+ the stock is OTM at expiration.
+\end_layout
+
+\begin_layout Enumerate
+The investor is employing a costless-collar.
+ Notice that in a costless collar, the premium from selling the call option
+ exactly matches the cost of the put option.
+ The investor accordingly locks in a range of profit and losses since the
+ investor is already long the underlying, buys a [protective] put and sells
+ a call.
+\end_layout
+
+\begin_layout Enumerate
+The profit from the trade is $4, thus (c) is correct.
+ We can calculate this as follows: 
+\begin_inset Formula $S{}_{maturity}<K$
+\end_inset
+
+, meaning that at maturity the underlying is worth less than the strike
+ of all the options.
+ Accordingly, all the put options will get exercised.
+ 
+\begin_inset Formula $\left[\left(\$49-\$34\right)-2\times\left(\$40-\$34\right)+\left(\$36-\$34\right)\right]=\$5$
+\end_inset
+
+.
+ The initial option premiums sum up to: 
+\begin_inset Formula $\left(-\$8+2\times5-3\right)=-\$1$
+\end_inset
+
+.
+ Thus 
+\begin_inset Formula $\$5-\$1=\$4$
+\end_inset
+
+.t
+\end_layout
+
+\begin_layout Enumerate
+A box spread arbitrage only works with European options as the payoff is
+ always 
+\begin_inset Formula $K_{2}-K_{1}$
+\end_inset
+
+, while the present value of a European option is thus 
+\begin_inset Formula $(K_{2}-K_{1})e^{-rT}$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document
